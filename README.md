@@ -2,6 +2,7 @@
 
 Integrantes:
 Augusto Farina RA: 22.219.020-9
+
 Eiji Dogen RA: 22.219.027-4
 
 Link para vídeo de demonstração:
