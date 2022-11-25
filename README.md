@@ -1,6 +1,6 @@
 # ProjetoRoboticaCC7711
 
-Integrantes:
+Integrantes:<br>
 Augusto Farina RA: 22.219.020-9<br>
 Eiji Dogen RA: 22.219.027-4
 
