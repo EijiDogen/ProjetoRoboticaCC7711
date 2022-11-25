@@ -1,18 +1,15 @@
 # ProjetoRoboticaCC7711
 
 Integrantes:
-Augusto Farina RA: 22.219.020-9
-
+Augusto Farina RA: 22.219.020-9<br>
 Eiji Dogen RA: 22.219.027-4
 
 Link para vídeo de demonstração:
 https://youtu.be/WRSzoT3GLi8 
 
 
-Considerações:
-
-Foi utilizado o mundo: CC7711_testes_II.wbt
-
+Considerações:<br>
+Foi utilizado o mundo: CC7711_testes_II.wbt<br>
 A rotação inicial do robô foi alterada para ele olhar uma parede válida.
 
 Funcionamento do robô:
