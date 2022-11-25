@@ -81,36 +81,40 @@ int main(int argc, char **argv) {
      if (estado == 0){
        AceleradorEsquerdo = 1.0;
        AceleradorDireito = 1.0;
-       if (front_wall || right_wall || right_close){
+       // Anda para frente ate encontrar algo para usar de referencia
+       if (front_wall || right_wall){
          estado = 1;
        }
      }
      
      if (estado == 1){  // Caso tenha encontrado uma parede
-       if(front_wall){
+ 
+       if(front_wall){ // Verifica se há um obstaculo na frente
+         // Gira para esquerda
          count = 0;
          AceleradorEsquerdo = -0.3;
          AceleradorDireito = 0.3;
      
-       }else{
-       
-         if (right_wall){
-           count = 0;
-           AceleradorEsquerdo = 1.0;
-           AceleradorDireito = 1.0;
- 
-         }else{
-           AceleradorEsquerdo = 1.0;
-           AceleradorDireito = 0.15;
-           count += 1;
-         }
+       }else if (right_close){// Verifica se esta em rumo para colidir com parede direita
+         // Anda curvado para esquerda
+         count = 0;
+         AceleradorEsquerdo = 0.15;
+         AceleradorDireito = 1.0;
          
-         if (right_close){
-           count = 0;
-           AceleradorEsquerdo = 0.15;
-           AceleradorDireito = 1.0;
-         }
+       }else if (right_wall){ //Verifica se há uma parede na direita
+         // Anda reto
+         count = 0;
+         AceleradorEsquerdo = 1.0;
+         AceleradorDireito = 1.0;
+         
+       }else{ // Caso nao haja parede nem na frente nem da direita
+         // Anda curvado para direita
+         AceleradorEsquerdo = 1.0;
+         AceleradorDireito = 0.15;
+         count += 1;
+         
        }
+       
        
        // Caso o robo esteja andando em circulos por muito tempo, ele
        // comeca a andar so para frente ate encontrar uma parede
